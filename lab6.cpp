@@ -10,16 +10,16 @@
 #include <iostream>
 using namespace std;
 
-// ---------- Function Prototypes ----------
-// Function to enter data into the dynamic array
-void enterArrayData(double* arr, const int SIZE){
-    cout << "Data entry for the array: " << endl;
+// Function to enter user data into the dynamic array
+void enterArrayData(double* arr, const int SIZE) {
+    cout << "Data entry for the array:" << endl;
 
-    // Loop through elements using pointer arithmetic 
-    for (int i = 0; i < SIZE; i++) { 
-        cout << "  Enter value for element " << (i + 1) << ": ";
-        cin >> *(arr + i); // Use pointer notation to set value
+    for (int i = 0; i < SIZE; i++) {
+        cout << "    > Element #" << i << ": ";
+        cin >> *(arr + i);   // pointer notation
     }
+
+    cout << "Data entry complete." << endl;
 }
 
 // Function to output array contents on one line
@@ -42,7 +42,6 @@ double sumArray(double* arr, const int SIZE) {
     return sum;  // return result (no printing here)
 }
 
-// ---------- main ----------
 int main() {
     // Constant for array size
     const int SIZE = 5;
